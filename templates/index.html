@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skincare Routine Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Skincare Routine Generator</h1>
+        <form method="POST" action="/">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required><br>
+
+            <label for="skin_type">Skin Type:</label>
+            <select id="skin_type" name="skin_type">
+                <option value="Oily">Oily</option>
+                <option value="Dry">Dry</option>
+                <option value="Combination">Combination</option>
+                <option value="Sensitive">Sensitive</option>
+                <option value="Normal">Normal</option>
+            </select><br>
+
+            <label for="concerns">Skin Concerns:</label>
+            <input type="text" id="concerns" name="concerns" required><br>
+
+            <label for="lifestyle">Lifestyle Factors:</label>
+            <input type="text" id="lifestyle" name="lifestyle"><br>
+
+            <label for="allergies">Allergies/Preferences:</label>
+            <input type="text" id="allergies" name="allergies"><br>
+
+            <input type="submit" value="Generate Routine">
+        </form>
+    </div>
+</body>
+</html>
